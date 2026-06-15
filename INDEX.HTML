@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parsa | Social Links</title>
+    <!-- اضافه کردن فونت و آیکون -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        /* انیمیشن پس‌زمینه */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* کارت اصلی شیشه‌ای */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            width: 350px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+            color: white;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1 { font-size: 24px; margin-bottom: 10px; font-weight: 600; }
+        p { font-size: 14px; opacity: 0.8; margin-bottom: 30px; }
+
+        /* استایل دکمه‌ها */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.3s all ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+        }
+
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* دکمه اصلی پایین (مشابه عکس) */
+        .main-btn {
+            background: white;
+            color: #302b63;
+            margin-top: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+        }
+
+        .main-btn:hover {
+            background: #f0f0f0;
+            color: #000;
+        }
+
+        i { font-size: 20px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="glass-card">
+        <!-- اینجا می‌تونی آدرس لوگوی خودت رو بذاری -->
+        <img src="https://via.placeholder.com/150" alt="Logo" class="logo">
+        
+        <h1>پارسا</h1>
+        <p>"معلم زبان، خلبان و کدنویس"</p>
+
+        <div class="links-container">
+            <!-- لینک تلگرام -->
+            <a href="https://t.me/YOUR_USERNAME" target="_blank" class="link-item">
+                <i class="fab fa-telegram"></i>
+                تلگرام من
+            </a>
+
+            <!-- لینک اینستاگرام -->
+            <a href="https://instagram.com/YOUR_USERNAME" target="_blank" class="link-item">
+                <i class="fab fa-instagram"></i>
+                اینستاگرام
+            </a>
+
+            <!-- لینک واتساپ -->
+            <a href="https://wa.me/989120000000" target="_blank" class="link-item">
+                <i class="fab fa-whatsapp"></i>
+                واتساپ
+            </a>
+
+            <!-- دکمه تماس مستقیم -->
+            <a href="tel:+989120000000" class="link-item main-btn">
+                <i class="fas fa-phone"></i>
+                تماس با من
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
