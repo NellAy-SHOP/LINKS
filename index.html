@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NellAy | Professional Links</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
 --primary-blue:#1c92d2;
 --glass-bg:rgba(255,255,255,0.28);
@@ -27,6 +26,7 @@ box-sizing:border-box;
 body{
 min-height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 font-family:'Montserrat',sans-serif;
@@ -35,6 +35,7 @@ background-attachment:fixed;
 padding:20px;
 }
 
+/* Floating Card */
 @keyframes float{
 0%,100%{transform:translateY(0)}
 50%{transform:translateY(-10px)}
@@ -55,7 +56,6 @@ animation:float 6s ease-in-out infinite;
 }
 
 /* LOGO */
-
 .logo-container{
 width:110px;
 height:110px;
@@ -75,7 +75,6 @@ display:block;
 }
 
 /* BRAND */
-
 h1{
 font-family:'Pacifico',cursive;
 font-size:38px;
@@ -84,14 +83,12 @@ text-shadow:0 4px 12px rgba(0,0,0,0.1);
 margin-bottom:12px;
 }
 
-.brand-ay{
-font-weight:700;
-}
+.brand-ay{font-weight:700;}
 
 .bio{
 font-size:13px;
 color:var(--text-main);
-opacity:0.95;
+opacity:.95;
 margin-bottom:36px;
 font-weight:500;
 letter-spacing:1.8px;
@@ -99,11 +96,9 @@ text-transform:uppercase;
 }
 
 /* BUTTONS */
-
 .links-container{
 display:flex;
 flex-direction:column;
-width:100%;
 gap:14px;
 }
 
@@ -111,14 +106,12 @@ gap:14px;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:14px;
-width:100%;
 }
 
 .btn{
 display:flex;
 align-items:center;
 justify-content:center;
-width:100%;
 padding:17px 10px;
 border-radius:22px;
 text-decoration:none;
@@ -127,8 +120,7 @@ font-size:13px;
 font-weight:600;
 letter-spacing:1px;
 text-transform:uppercase;
-transition:all .3s cubic-bezier(.4,0,.2,1);
-border:none;
+transition:.3s ease;
 }
 
 .btn-grad{
@@ -140,50 +132,57 @@ box-shadow:0 8px 15px rgba(0,0,0,0.08);
 .btn-grad:hover{
 background-position:right center;
 transform:translateY(-3px);
-box-shadow:0 12px 20px rgba(0,0,0,0.12);
 }
 
 .btn-white{
-background:white!important;
-color:var(--primary-blue)!important;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
+background:white;
+color:var(--primary-blue);
 }
 
 .btn-white:hover{
-background:#f8fbff!important;
 transform:translateY(-3px);
 }
 
 .btn i{
-font-size:18px;
-margin-right:10px;
-flex-shrink:0;
-width:20px;
-display:flex;
-justify-content:center;
+margin-right:8px;
 }
 
-.btn:active{
-transform:scale(.97);
-}
+/* ===== PROFESSIONAL FOOTER ===== */
 
-@media (max-width:480px){
-.card{
-padding:40px 20px;
-max-width:95%;
-}
-h1{font-size:32px}
-.bio{
+footer{
+margin-top:auto;
+padding-top:40px;
+padding-bottom:10px;
+text-align:center;
+width:100%;
+
 font-size:11px;
-letter-spacing:1.2px
+font-weight:500;
+letter-spacing:2px;
+text-transform:uppercase;
+
+color:rgba(255,255,255,0.55); /* شفاف ولی خوانا */
 }
-.btn{
-font-size:12px;
-padding:15px 5px
+
+/* subtle separator line */
+footer::before{
+content:"";
+display:block;
+width:60px;
+height:1px;
+margin:0 auto 14px auto;
+background:rgba(255,255,255,0.25);
+border-radius:2px;
 }
-.logo-container{
-width:100px;
-height:100px
+
+/* Mobile */
+@media (max-width:480px){
+.card{padding:40px 20px;}
+h1{font-size:32px;}
+.bio{font-size:11px;}
+footer{
+font-size:10px;
+letter-spacing:1.5px;
 }
 }
 
@@ -195,7 +194,7 @@ height:100px
 <div class="card">
 
 <div class="logo-container">
-<img src="logo.jpg" alt="NellAy Logo">
+<img src="logo.jpg?v=5" alt="NellAy Logo">
 </div>
 
 <h1>Nell<span class="brand-ay">Ay</span></h1>
@@ -208,25 +207,28 @@ COSMETICS | PERFUME LABORATORY
 
 <div class="social-grid">
 <a href="https://instagram.com/_.nell.ay._" class="btn btn-grad" target="_blank">
-<i class="fab fa-instagram"></i> Instagram
+<i class="fab fa-instagram"></i>Instagram
 </a>
 
 <a href="https://t.me/NellAy20" class="btn btn-grad" target="_blank">
-<i class="fab fa-telegram-plane"></i> Telegram
+<i class="fab fa-telegram-plane"></i>Telegram
 </a>
 </div>
 
 <a href="https://wa.me/message/XN4RHFD4LFNYI1" class="btn btn-grad" target="_blank">
-<i class="fab fa-whatsapp"></i> WhatsApp
+<i class="fab fa-whatsapp"></i>WhatsApp
 </a>
 
 <a href="tel:+989198207696" class="btn btn-white">
-<i class="fas fa-phone-alt"></i> Contact Me
+<i class="fas fa-phone-alt"></i>Contact Me
 </a>
 
 </div>
-
 </div>
+
+<footer>
+Designed & Coded by ParsaPlex
+</footer>
 
 </body>
 </html>
